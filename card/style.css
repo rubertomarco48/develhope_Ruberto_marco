@@ -1,0 +1,28 @@
+header{width: 50%;
+       border: 2px solid  grey;
+       left: 25%;
+       border-radius: 5px 5px 0 0 ;}
+img{width: 197px;
+    padding-top: 1px;}
+
+p{padding-left: 5px;}
+.primo{width: 50%;
+       
+       border: 2px solid grey;
+       border-top: 2px solid rgb(255, 255, 255);}
+.secondo{width: 50%;
+       
+       border: 2px solid grey;
+       border-top: 2px solid rgb(255, 255, 255);}
+.terzo{width: 50%;
+       
+       border: 2px solid grey;
+       border-top: 2px solid rgb(255, 255, 255);}
+footer{width: 50%;
+       padding-top: 3%;
+       padding-bottom: 3%;
+       border-radius: 0 0 5px 5px;
+        
+        border: 2px solid grey;
+        border-top: 2px solid rgb(255, 255, 255);}
+a{padding: 10px;}
