@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <div class="anagrafici">
+          <label for="email">Inserisci la tua mail</label>
+          <input type="email" name="email" checked >
+          <label for="pass">Inserisci la tua password</label>
+          <input type="password" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="12" checked>
+          <label for="name">Inserisci il tuo nome :  </label>
+          <input type="text" name="name" checked>
+          <label for="surname">Inserisci il tuo cognome :</label>
+          <input type="text" name="surname" checked>
+          <label for="birthday">Inserisci la tua data di nascita:</label>
+          <input type="date" name="birthday" checked>
+          <label for="tel">Inserisci il tuo numero di telefono :</label>
+          <input type="tel" name="tel" checked>
+        </div>
+        <div class="plan">
+          <br>
+          <select name="plan">
+            <option value="basic"> Basic Plan <strong>9,99€</strong> </option>
+            <option value="medium">Medium Plan <strong>15,99€</strong> </option>
+            <option value="large">Large Plan <strong>20,99€</strong> </option>
+          </select>
+          <br>
+          <br>
+          <label for="pro">se sei interessato alla versione pro <br> seleziona la casella successiva</label>
+          <input type="checkbox" value="pro" name="pro">
+        </div>
+        <div class="creditCard">
+          <label for="credit">Inserisci il numero della tua carta di credito</label>
+          <input name="credit" type="tel" inputmode="number" pattern="[0-9\s]{13,19}" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+          <label for="cvc">Inserisci cvc</label>
+          <input name="cvc" type="tel" maxlength="3" inputmode="number" pattern="[0-9\s]{3}">
+          <label for="expireMM">scadenza carta</label>
+          <div >
+            <select name='expireMM' id='expireMM'>
+              <option value=''>Month</option>
+              <option value='01'>January</option>
+              <option value='02'>February</option>
+              <option value='03'>March</option>
+              <option value='04'>April</option>
+              <option value='05'>May</option>
+              <option value='06'>June</option>
+              <option value='07'>July</option>
+              <option value='08'>August</option>
+              <option value='09'>September</option>
+              <option value='10'>October</option>
+              <option value='11'>November</option>
+              <option value='12'>December</option>
+          </select> 
+          <select name='expireYY' id='expireYY'>
+              <option value=''>Year</option>
+              <option value='20'>2020</option>
+              <option value='21'>2021</option>
+              <option value='22'>2022</option>
+              <option value='23'>2023</option>
+              <option value='24'>2024</option>
+          </select> 
+          <input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4"/>
+          </div>
+          <label for="address">indirizzo di fatturazione</label>
+          <input type="text" name="address" pattern="[0-9,A-Z,a-z]{13,19}" >
+        </div>
+        <br>
+        <input type="submit">
+      </form>
+    </main>
+  </body>
+</html>
