@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML Lesson</title>
+  </head>
+  <body>
+    <main>
+      <form class="bottone">
+          <h3>button disabilitato</h3>
+          <button disabled>premi</button>
+      </form>
+      <br>
+      
+      <form>
+          <h3>input range a step di 2</h3>
+          <label for="età">numeri pari da 0 a 100</label>
+          <input type="range" oninput="this.nextElementSibling.value = this.value" name="età" id="età" min="0" max="100" step="2" width="200px" >
+          <output>50</output>
+          
+      </form>
+      <br>
+      <br>
+      <form>
+          <h3>checkbox selezionata</h3>
+          <input type="checkbox" checked id="check" value="check" name="check"  >
+          <label for="check">agree the terms and conditions</label>
+      </form>
+      <br>
+      <br>
+      <form>
+        <h3>input data</h3>
+        <label for="data">inserisci la data di oggi</label>
+        <br>
+        <br>
+        <input type="date" name="data">
+      </form>
+    </main>
+  </body>
+</html>
