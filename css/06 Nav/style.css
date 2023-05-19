@@ -29,7 +29,7 @@ input {
   background: none;
   border: none;
   position: relative;
-  left: -40px;
+  left: -35px;
   color: rgb(128, 126, 126);
 }
 .search {
@@ -61,7 +61,7 @@ li:nth-child(3) a {
 }
 li:nth-child(4) {
   position: relative;
-  left: -40px;
+  left: -45px;
 }
 
 select {
@@ -91,4 +91,49 @@ nav{
   height: 50px;
   display: inline;
   border-bottom: 2px solid white;
+}
+
+
+
+
+@media screen and (max-width: 650px){
+  #hidden{
+    visibility: hidden;
+  }
+ .hamburger{
+  content: "";
+  height: 40px;
+  width: 40px;
+  
+  position: absolute;
+  top: 3px;
+  right: 5px;
+ }
+ .hamburger__icon1{
+   width: 80%;
+   height: 2px;
+   border-radius: 2px;
+   background-color: rgb(255, 255, 255);
+   position: relative;
+   top: 18px;
+   right: 4px;
+ }
+ .hamburger__icon3{
+  width: 80%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  top: 6px;
+  right: 4px;
+}
+.hamburger__icon2{
+  width: 80%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  top: 25px;
+  right: 4px;
+}
 }

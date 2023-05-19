@@ -12,20 +12,31 @@
     <nav>
       <ul>
         <li><a href="">Navbar</a></li>
-        <li><a href="">Home</a></li>
-        <li><a href="">Link</a></li>
-        <li>
+        
+        <li id="hidden"><a href="">Home</a></li>
+        <li id="hidden"><a href="">Link</a></li>
+        <li id="hidden">
           <select name="dropdown" id="dropdown">
             <option value="dropdown" selected><a href="">Dropdown</a></option>
             <option value="">Option2</option>
           </select>
         </li>
-        <button disabled class="dis">Disabled</button>
+        <button id="hidden" disabled class="dis">Disabled</button>
       </ul>
-      <div>
-        <input type="text" name="search" placeholder="Search" />
-        <button class="search">Search</button>
+      <div class="hamburger">
+        <div class="hamburger__icon1"></div>
+        <div class="hamburger__icon2"></div>
+        <div class="hamburger__icon3"></div>
       </div>
+
+      <div>
+        <input id="hidden" type="text" name="search" placeholder="Search" />
+        <button id="hidden" class="search">Search</button>
+      
+      </div>
+      
     </nav>
+    
   </body>
+ 
 </html>
