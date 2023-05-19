@@ -1,0 +1,52 @@
+body{
+    display:grid;
+    grid-template-columns:repeat(3 ,1fr) ;
+    grid-template-rows: 30vh 30vh 30vh;
+    gap:20px;
+    grid-template-areas: 
+    "gree gree gree "
+    "yello re blu"
+    "orang orang blu";
+}
+
+  
+  #green {
+
+    background-color: #8ffda7;
+    grid-area: gree;
+  }
+  
+  #orange {
+    background-color: #ffc788;
+    grid-area: orang;
+  }
+  
+  #yellow {
+    background-color: #ffff92;
+    grid-area: yello;
+}
+  
+  #red {
+    background-color: #ff919c;
+    grid-area: re;
+  }
+  
+  #blue {
+    background-color: #98d2ff;
+    grid-area: blu;
+  }
+  
+  ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    grid-template-rows: 3rem 3rem;
+  }
+  
+  li {
+   
+    background-color: white;
+    padding: 1em;
+    display: block;
+    margin: 1em;
+  }
