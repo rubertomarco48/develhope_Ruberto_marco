@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #303030;
+}
+.card{
+    background-color: #292929;
+    border-radius: 0.625rem;
+    display: block;
+    width: 12.5rem;
+    height: 18.75rem;  
+    padding: 1.563rem 1.563rem 3.438rem 1.563rem;
+    
+    animation: 2s;
+    transition: background-color .3s cubic-bezier(.32,.09,.18,.94);
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: background-color;
+    
+}
+.play__card{
+    opacity: 0;
+    
+    width: 12.5rem;
+    height: 18.75rem;
+    position: relative;
+    top: -11.25rem;
+    left: -1.375rem;
+    z-index: 5;
+}
+.play__card__img{
+    width: 1.875rem;
+    position: relative;
+    top:8.75rem;
+    left:8.6rem;
+}
+.h3__card{
+    color: white;
+}
+.p__card{
+    color: grey;
+}
+.play__card:hover{ 
+    opacity: 1;
+    transition: all 0.3s;
+}
+.card:hover{
+    background-color: #4c4c4c;
+    border:1px solid #4c4c4c ;
+    z-index: 1;
+   
+}
+.img__card{
+    height: 9.375rem;
+    width: 9.375rem;
+    border-radius: 0.625rem;
+    z-index: 2;
+    
+}
+.h3__card,.p__card{
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  top: -18.125rem;
+}
