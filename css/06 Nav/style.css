@@ -100,11 +100,16 @@ nav{
   #hidden{
     visibility: hidden;
   }
+  .hamburger:hover{
+    background-color: grey;
+    transition: all 0.3s;
+    border-radius: 10px;
+  }
  .hamburger{
   content: "";
   height: 40px;
   width: 40px;
-  
+  cursor: pointer;
   position: absolute;
   top: 3px;
   right: 5px;
