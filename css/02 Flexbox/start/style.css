@@ -2,11 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+body{height: 100vh;
+    display: flex;
+
 }
 aside{
     display: flexbox;
     width: 200px;
-    height: 100vh;
+    height: 100%;
     background-color: blue;
 }
 .logo{
@@ -29,7 +34,14 @@ a{
     padding:60px 50px 60px 50px;
 }
 .container{
-    padding: 140px 0 140px 0;
+    
+    width: calc(100% - 200px);    
     text-align: center;
+    
 }
+h3,.avatar{
+    position: relative;
+    bottom: -25rem;
+}
+
 /* non sono riuscito a farlo con flex possibilmente avrei bisogno di capirlo meglio */
