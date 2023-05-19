@@ -3,10 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+main{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap:1rem;
+}
 html{
     background-color: #303030;
 }
 .card{
+
     background-color: #292929;
     border-radius: 0.625rem;
     display: block;
@@ -66,4 +74,14 @@ html{
   z-index: 2;
   position: relative;
   top: -18.125rem;
+}
+@media  screen and (max-width: 768px) {
+    main{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media  screen and (max-width: 375px) {
+    main{
+        grid-template-columns: 1fr;
+    }
 }
