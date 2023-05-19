@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    
+    grid-template-rows: repeat(5,50px);
+    grid-template-columns: repeat(4,1fr);
+    margin: 50px;
+    width: 400px;
+    border-radius: 20px;
+}
+p{
+    font-weight: bold;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    
+    height: 100%;
+}
+div{
+    
+    height: auto;
+}
+#totale{
+    grid-column: span 4;
+    border: none;
+    position: relative;
+    text-align:end;
+    background-color: rgb(78, 77, 77);
+    border-radius: 20px 20px 0 0;
+    color: white;
+}
+#totale p{
+    text-align: right;
+    position: relative;
+    right: 10px;
+    top: 5px;
+}
+.uguale{
+    grid-row: span 4;
+    border-radius: 0 0 20px 0;
+    background-color: red;
+    
+}
+.zero{
+    border-radius: 0 0 0 20px;
+}
+.uguale__p{
+    position: relative;
+    top: 80px;
+}
+.piu,.meno,.per,.diviso{
+    background-color: grey;
+    border-bottom: 1px solid black;
+}
+.meno,.due,.cinque,.otto,.punto{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.per,.tre,.sei,.nove,.AC{
+    border-right: 1px solid black;
+    
+}
+.quattro,.cinque,.sei{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.sette,.otto,.nove{
+    border-bottom: 1px solid black;
+}
