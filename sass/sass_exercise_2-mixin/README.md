@@ -11,3 +11,10 @@ The font size should also have a default value equal to 1rem. The footer font-si
 @mixin article-card($color, ...) {
 color: $color;
 ...
+
+Crea il layout visualizzato nell'immagine. Prova ad usare un mixin per applicare lo stile dei tag `article`. Il mixin dovrebbe contenere 3 parametri:
+1. colore
+2. colore del bordo
+3. dimensione del carattere
+
+Anche la dimensione del carattere dovrebbe avere un valore predefinito pari a 1rem. La dimensione del carattere del piè di pagina è pari a 24px.

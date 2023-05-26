@@ -1,0 +1,60 @@
+$color-primary:red;
+$color-secondary:blue;
+$color-tertiary:green;
+$size-font:1rem;
+$footer-font-size:24px;
+
+@mixin article-card($color-font,$color-border,$size){
+    color: $color-font;
+    border-color:$color-border;
+    font-size:$size;
+    text-align: center;
+    padding: 5px;
+}
+div{
+    border:1px solid $color-primary;
+    h1{
+        display: flex;
+        text-decoration: underline;
+        color: $color-tertiary;
+        justify-content: center;
+    }
+    section{
+        
+        display: grid;
+        margin: 10px;
+        grid-template-columns: repeat(4,1fr);
+        article{
+            &:first-child{
+                @include article-card($color-secondary, $color-tertiary, $size-font);
+                border:1px solid $color-primary;
+            }
+            &:nth-child(3){
+                @include article-card($color-secondary, $color-tertiary, $size-font);
+                border:1px solid $color-primary;
+            }
+            &:nth-child(2){
+                @include article-card($color-primary, $color-tertiary, $size-font);
+                border:1px solid $color-primary;
+                border-left: none;
+                border-right: none;
+            }
+            &:nth-child(4){
+                @include article-card($color-primary, $color-tertiary, $size-font);
+                border:1px solid $color-primary;
+                border-left: none;
+            }
+        }
+
+        &:nth-child(3){
+            border:1px solid $color-secondary;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            article{
+                border: none ;
+                text-align: center;
+            }
+        }
+        }
+    }
