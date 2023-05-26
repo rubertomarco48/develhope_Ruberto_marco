@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    
+    display: grid;
+     margin-top: 30px;
+    grid-template-columns: repeat(5 ,1fr);
+    grid-template-areas: " . card1 card2 card3 .";
+    gap: 20px;
+    .card1{
+        grid-area: card1;
+    }
+    .card2{
+        grid-area: card2;
+    }
+    .card3{
+        grid-area: card3;
+    }
+    .card1,.card2,.card3 {
+    position: relative;
+    width: 150px;
+    min-height: 250px;
+    max-height: auto;
+        
+    background-color: rgb(210, 209, 209);
+    border-radius: 12px;
+    .description p{
+        
+        font-size: 15px;
+        margin: 5px;
+        
+    }
+    picture{
+        img{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        }
+    }
+    .int{
+        display: flex;
+        height: 25px;
+        background-color: grey;
+        border-radius: 10px 10px 0 0;
+        button:first-child{
+        position: relative;
+        top:2.5px;
+        left: 2.5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        border: none;
+        }
+        button:last-child{
+            position: relative;
+            top: -10px;
+            left: 35px;
+            font-size: 20px;
+            height: 20px;
+            border: none;
+            background: transparent;
+        }
+        .text{
+            font-size: 10px;
+            position: relative;
+            left: 10px;
+            p:first-child{
+                font-weight: bold;
+            }
+            p:last-child{
+                color: rgb(173, 172, 172);
+            }
+        }
+}
+    svg{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        
+    }
+
+
+}
+}
+@media (max-width:768px){
+    body{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        ". card1 card2 ."
+        ". card3 . .";
+    }
+}
+@media (max-width:375px){
+    body{
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas: 
+        ". card1 ."
+        ". card2 ."
+        ". card3 .";
+    }
+}
