@@ -1,0 +1,50 @@
+.exercise {
+  border: 1px solid red;
+}
+.exercise .exercise-title {
+  color: green;
+}
+
+div {
+  border: 1px solid red;
+}
+div h1 {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  color: green;
+  text-decoration: underline;
+}
+div section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+div section article:nth-child(odd) {
+  color: blue;
+}
+div section article:nth-child(even) {
+  color: red;
+}
+div section article:first-child {
+  border: 1px solid red;
+  margin: 10px 0 10px 10px;
+  padding: 5px;
+}
+div section article:last-child {
+  border: 1px solid red;
+  margin: 10px 10px 10px 0;
+  padding: 5px;
+}
+div section article:nth-child(2) {
+  border: 1px solid red;
+  border-left: none;
+  margin: 10px 0 10px 0px;
+  padding: 5px;
+}
+div section article:nth-child(3) {
+  border: 1px solid red;
+  border-left: none;
+  border-right: none;
+  margin: 10px 0 10px 0px;
+  padding: 5px;
+}/*# sourceMappingURL=style.css.map */
