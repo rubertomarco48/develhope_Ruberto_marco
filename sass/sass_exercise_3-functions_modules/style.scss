@@ -1,0 +1,66 @@
+@use "sass:color";
+$color-primary: color.adjust(red, $lightness: -5%);
+$color-secondary: color.adjust(blue, $lightness: -5%);
+$color-tertiary: color.adjust(green, $lightness: -5%);
+@function rem($pixel){
+    $remFontSize: 16;
+    @return ($pixel/16)*1rem;
+}
+$size-font: 1rem;
+$footer-font-size: rem(24);
+
+@mixin article-card($color-font, $color-border, $size) {
+  color: $color-font;
+  border-color: $color-border;
+  font-size: $size-font;
+  text-align: center;
+  padding: rem(5);
+}
+div {
+  border: rem(1) solid $color-primary;
+  h1 {
+    display: flex;
+    text-decoration: underline;
+    color: $color-tertiary;
+    justify-content: center;
+  }
+  section {
+    display: grid;
+    margin: rem(10);
+    grid-template-columns: repeat(4, 1fr);
+    article {
+      &:first-child {
+        @include article-card($color-secondary, $color-tertiary, $size-font);
+        border: rem(1) solid $color-primary;
+      }
+      &:nth-child(3) {
+        @include article-card($color-secondary, $color-tertiary, $size-font);
+        border: rem(1) solid $color-primary;
+      }
+      &:nth-child(2) {
+        @include article-card($color-primary, $color-tertiary, $size-font);
+        border: rem(1) solid $color-primary;
+        border-left: none;
+        border-right: none;
+      }
+      &:nth-child(4) {
+        @include article-card($color-primary, $color-tertiary, $size-font);
+        border: rem(1) solid $color-primary;
+        border-left: none;
+      }
+    }
+
+    &:nth-child(3) {
+      border: rem(1) solid $color-secondary;
+      margin: rem(10);
+      padding: rem(10);
+      display: flex;
+      
+      article {
+        font-size: rem(24);
+        border: none;
+        text-align: center;
+      }
+    }
+  }
+}
