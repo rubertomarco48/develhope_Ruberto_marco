@@ -18,7 +18,7 @@ div section article:first-child {
   font-size: 1rem;
   text-align: center;
   padding: 5px;
-  border: 1px solid red;
+  border: 1px solid green;
 }
 div section article:nth-child(3) {
   color: blue;
@@ -26,7 +26,7 @@ div section article:nth-child(3) {
   font-size: 1rem;
   text-align: center;
   padding: 5px;
-  border: 1px solid red;
+  border: 1px solid green;
 }
 div section article:nth-child(2) {
   color: red;
@@ -34,7 +34,7 @@ div section article:nth-child(2) {
   font-size: 1rem;
   text-align: center;
   padding: 5px;
-  border: 1px solid red;
+  border: 1px solid green;
   border-left: none;
   border-right: none;
 }
@@ -44,7 +44,7 @@ div section article:nth-child(4) {
   font-size: 1rem;
   text-align: center;
   padding: 5px;
-  border: 1px solid red;
+  border: 1px solid green;
   border-left: none;
 }
 div section:nth-child(3) {

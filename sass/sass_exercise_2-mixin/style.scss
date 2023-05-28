@@ -27,21 +27,21 @@ div{
         article{
             &:first-child{
                 @include article-card($color-secondary, $color-tertiary, $size-font);
-                border:1px solid $color-primary;
+                border:1px solid $color-tertiary;
             }
             &:nth-child(3){
                 @include article-card($color-secondary, $color-tertiary, $size-font);
-                border:1px solid $color-primary;
+                border:1px solid $color-tertiary;
             }
             &:nth-child(2){
                 @include article-card($color-primary, $color-tertiary, $size-font);
-                border:1px solid $color-primary;
+                border:1px solid $color-tertiary;
                 border-left: none;
                 border-right: none;
             }
             &:nth-child(4){
                 @include article-card($color-primary, $color-tertiary, $size-font);
-                border:1px solid $color-primary;
+                border:1px solid $color-tertiary;
                 border-left: none;
             }
         }

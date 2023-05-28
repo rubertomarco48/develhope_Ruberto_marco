@@ -38,25 +38,33 @@ div {
     article {
       &:first-child {
         @include article-card($color-secondary, $color-tertiary, $size-font);
-        border: rem(1) solid $color-primary;
+        border: rem(1) solid $color-tertiary;
       }
       &:nth-child(3) {
         @include article-card($color-secondary, $color-tertiary, $size-font);
-        border: rem(1) solid $color-primary;
+        border: rem(1) solid $color-tertiary;
       }
       &:nth-child(2) {
         @include article-card($color-primary, $color-tertiary, $size-font);
-        border: rem(1) solid $color-primary;
+        border: rem(1) solid $color-tertiary;
         border-left: none;
         border-right: none;
       }
       &:nth-child(4) {
         @include article-card($color-primary, $color-tertiary, $size-font);
-        border: rem(1) solid $color-primary;
+        border: rem(1) solid $color-tertiary;
         border-left: none;
       }
     }
-
+    &:nth-child(4){
+      display:flex;
+      justify-content: space-between;
+      div{
+        height: rem(45);
+        width: rem(45);
+        
+      }
+    }
     &:last-child {
       border: rem(1) solid $color-secondary;
       margin: rem(10);

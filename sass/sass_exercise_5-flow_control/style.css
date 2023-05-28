@@ -23,7 +23,7 @@ div section article:first-child {
   font-size: 1rem;
   text-align: center;
   padding: 0.3125rem;
-  border: 0.0625rem solid #e60000;
+  border: 0.0625rem solid #006700;
 }
 div section article:nth-child(3) {
   color: #0000e6;
@@ -31,7 +31,7 @@ div section article:nth-child(3) {
   font-size: 1rem;
   text-align: center;
   padding: 0.3125rem;
-  border: 0.0625rem solid #e60000;
+  border: 0.0625rem solid #006700;
 }
 div section article:nth-child(2) {
   color: #e60000;
@@ -39,7 +39,7 @@ div section article:nth-child(2) {
   font-size: 1rem;
   text-align: center;
   padding: 0.3125rem;
-  border: 0.0625rem solid #e60000;
+  border: 0.0625rem solid #006700;
   border-left: none;
   border-right: none;
 }
@@ -49,8 +49,16 @@ div section article:nth-child(4) {
   font-size: 1rem;
   text-align: center;
   padding: 0.3125rem;
-  border: 0.0625rem solid #e60000;
+  border: 0.0625rem solid #006700;
   border-left: none;
+}
+div section:nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+}
+div section:nth-child(4) div {
+  height: 2.8125rem;
+  width: 2.8125rem;
 }
 div section:last-child {
   border: 0.0625rem solid #0000e6;
