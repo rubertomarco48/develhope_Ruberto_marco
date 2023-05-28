@@ -1,10 +1,17 @@
 @use "sass:color";
+@use "sass:map";
 $color-primary: color.adjust(red, $lightness: -5%);
 $color-secondary: color.adjust(blue, $lightness: -5%);
 $color-tertiary: color.adjust(green, $lightness: -5%);
+$map: fs-1rem, fs-2rem, fs-3rem;
+@each $value in $map{
+   .#{$value}{
+    height: rem(45) ;
+    width: rem(45) ;
+   }
+}
 @function rem($pixel){
-    $remFontSize: 16;
-    @return ($pixel/16)*1rem;
+  @return ($pixel/16)*1rem;
 }
 $size-font: 1rem;
 $footer-font-size: rem(24);
@@ -59,11 +66,12 @@ div {
     &:nth-child(4){
       display:flex;
       justify-content: space-between;
-      div{
-        height: rem(45);
-        width: rem(45);
-        
+      @for $index from 1 through 3{
+         .fs-#{$index}rem{
+          font-size: #{$index}rem;
+         }      
       }
+      
     }
     &:last-child {
       border: rem(1) solid $color-secondary;

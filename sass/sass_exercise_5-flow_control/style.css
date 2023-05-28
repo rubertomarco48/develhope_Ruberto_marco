@@ -1,3 +1,18 @@
+.fs-1rem {
+  height: rem(45);
+  width: rem(45);
+}
+
+.fs-2rem {
+  height: rem(45);
+  width: rem(45);
+}
+
+.fs-3rem {
+  height: rem(45);
+  width: rem(45);
+}
+
 div {
   border: 0.0625rem solid #e60000;
 }
@@ -56,9 +71,14 @@ div section:nth-child(4) {
   display: flex;
   justify-content: space-between;
 }
-div section:nth-child(4) div {
-  height: 2.8125rem;
-  width: 2.8125rem;
+div section:nth-child(4) .fs-1rem {
+  font-size: 1rem;
+}
+div section:nth-child(4) .fs-2rem {
+  font-size: 2rem;
+}
+div section:nth-child(4) .fs-3rem {
+  font-size: 3rem;
 }
 div section:last-child {
   border: 0.0625rem solid #0000e6;

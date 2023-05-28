@@ -1,5 +1,8 @@
 div {
   border: 0.0625rem solid #e60000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 div h1, div h2 {
   display: flex;
@@ -10,7 +13,9 @@ div h1, div h2 {
 }
 div h2 {
   padding: 1rem;
-  border: 0.0625rem solid red;
+  border: 0.0625rem solid #e60000;
+  text-decoration: none;
+  width: 50%;
 }
 div section {
   display: grid;
