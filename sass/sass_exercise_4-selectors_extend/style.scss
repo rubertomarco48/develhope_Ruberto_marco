@@ -23,7 +23,7 @@ div {
     text-decoration: underline;
     color: $color-tertiary;
     justify-content: center;
-    margin:10px;
+    margin:rem(10);
   }
   h2{
     @extend h1;
@@ -38,21 +38,21 @@ div {
     article {
       &:first-child {
         @include article-card($color-secondary, $color-tertiary, $size-font);
-        border: rem(1) solid $color-primary;
+        border: rem(1) solid $color-tertiary;
       }
       &:nth-child(3) {
         @include article-card($color-secondary, $color-tertiary, $size-font);
-        border: rem(1) solid $color-primary;
+        border: rem(1) solid $color-tertiary;
       }
       &:nth-child(2) {
         @include article-card($color-primary, $color-tertiary, $size-font);
-        border: rem(1) solid $color-primary;
+        border: rem(1) solid $color-tertiary;
         border-left: none;
         border-right: none;
       }
       &:nth-child(4) {
         @include article-card($color-primary, $color-tertiary, $size-font);
-        border: rem(1) solid $color-primary;
+        border: rem(1) solid $color-tertiary;
         border-left: none;
       }
     }

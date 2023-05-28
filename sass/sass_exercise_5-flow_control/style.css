@@ -1,1 +1,65 @@
-/*# sourceMappingURL=style.css.map */
+div {
+  border: 0.0625rem solid #e60000;
+}
+div h1, div h2 {
+  display: flex;
+  text-decoration: underline;
+  color: #006700;
+  justify-content: center;
+  margin: 10px;
+}
+div h2 {
+  padding: 1rem;
+  border: 0.0625rem solid red;
+}
+div section {
+  display: grid;
+  margin: 0.625rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+div section article:first-child {
+  color: #0000e6;
+  border-color: #006700;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.3125rem;
+  border: 0.0625rem solid #e60000;
+}
+div section article:nth-child(3) {
+  color: #0000e6;
+  border-color: #006700;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.3125rem;
+  border: 0.0625rem solid #e60000;
+}
+div section article:nth-child(2) {
+  color: #e60000;
+  border-color: #006700;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.3125rem;
+  border: 0.0625rem solid #e60000;
+  border-left: none;
+  border-right: none;
+}
+div section article:nth-child(4) {
+  color: #e60000;
+  border-color: #006700;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.3125rem;
+  border: 0.0625rem solid #e60000;
+  border-left: none;
+}
+div section:last-child {
+  border: 0.0625rem solid #0000e6;
+  margin: 0.625rem;
+  padding: 0.625rem;
+  display: flex;
+}
+div section:last-child article {
+  font-size: 1.5rem;
+  border: none;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
