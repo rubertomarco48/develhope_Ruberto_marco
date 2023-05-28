@@ -3,18 +3,14 @@
 $color-primary: color.adjust(red, $lightness: -5%);
 $color-secondary: color.adjust(blue, $lightness: -5%);
 $color-tertiary: color.adjust(green, $lightness: -5%);
-$map: fs-1rem, fs-2rem, fs-3rem;
-@each $value in $map{
-   .#{$value}{
-    height: rem(45) ;
-    width: rem(45) ;
-   }
-}
 @function rem($pixel){
-  @return ($pixel/16)*1rem;
+    $remFontSize: 16;
+    @return ($pixel/16)*1rem;
 }
 $size-font: 1rem;
 $footer-font-size: rem(24);
+
+
 
 @mixin article-card($color-font, $color-border, $size) {
   color: $color-font;
@@ -23,22 +19,62 @@ $footer-font-size: rem(24);
   text-align: center;
   padding: rem(5);
 }
+$map: fs-1rem, fs-2rem, fs-3rem;
+@each $value in $map {
+  .#{$value} {
+    height: rem(45);
+    width: rem(45);
+  }
+}
+body{
+  width: 100vw;
+}
 div {
   border: rem(1) solid $color-primary;
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+ 
   h1 {
     display: flex;
     text-decoration: underline;
     color: $color-tertiary;
     justify-content: center;
-    margin:10px;
+    margin:rem(10);
   }
   h2{
     @extend h1;
     padding: 1rem;
-    border: rem(1) solid red;
+    border: rem(1) solid $color-primary;
+    text-decoration: none;
+    width: 50%;
 
   }
   section {
+    &:nth-child(4){
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      @for $index from 1 through 3 {
+        .fs-#{$index}rem{
+          font-size: #{$index}rem;
+        }
+      }
+      @for $inde from 1 through 20 {
+        div:nth-child(#{$inde}){
+         background-color: darken($color: #ffffff, $amount: calc($inde*5%) );
+         color: lighten($color: #000000, $amount: calc($inde*5%));
+        }
+         @if $inde == 10 {
+          div:nth-child(10){
+            background-color: $color-secondary;
+            color: $color-primary;
+          }
+         }
+        
+      }
+    }
     display: grid;
     margin: rem(10);
     grid-template-columns: repeat(4, 1fr);
@@ -62,16 +98,6 @@ div {
         border: rem(1) solid $color-tertiary;
         border-left: none;
       }
-    }
-    &:nth-child(4){
-      display:flex;
-      justify-content: space-between;
-      @for $index from 1 through 3{
-         .fs-#{$index}rem{
-          font-size: #{$index}rem;
-         }      
-      }
-      
     }
     &:last-child {
       border: rem(1) solid $color-secondary;
