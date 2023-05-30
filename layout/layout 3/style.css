@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+body nav {
+  width: 20%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body nav ul {
+  list-style: none;
+}
+body nav ul li {
+  width: 6.25rem;
+  height: 0.625rem;
+  background-color: rgb(205, 205, 205);
+  height: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+body nav ul li:first-child {
+  display: flex;
+  background: none;
+  height: 1.875rem;
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+body nav ul li:first-child .profile_picture {
+  height: 1.875rem;
+  width: 1.875rem;
+  background-color: rgb(205, 205, 205);
+}
+body nav ul li:first-child .username {
+  height: 1.875rem;
+  width: calc(100% - 1.875rem - 0.9375rem);
+  margin-left: 0.9375rem;
+  background-color: rgb(205, 205, 205);
+}
+body nav .banner {
+  min-width: 6.25rem;
+  width: 80%;
+  height: 6.25rem;
+  background-color: rgb(205, 205, 205);
+  border-radius: 0.625rem;
+  position: relative;
+  bottom: -38%;
+}
+body main {
+  width: 50%;
+  background-color: rgb(231, 231, 231);
+}
+body main .topbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.625rem;
+}
+body main .topbar input {
+  border: none;
+  background-color: rgb(205, 203, 203);
+  width: 50%;
+  border-radius: 0.3125rem;
+}
+body main .topbar .icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: rgb(205, 205, 205);
+  border-radius: 0.3125rem;
+}
+body main .secondbar {
+  display: flex;
+  justify-content: space-between;
+}
+body main .secondbar div {
+  height: 1.25rem;
+  width: 4.375rem;
+  background-color: rgb(205, 205, 205);
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0 0.625rem 0.625rem;
+}
+body main .secondbar ul {
+  display: flex;
+  list-style: none;
+}
+body main .secondbar ul li {
+  margin: 0.625rem 0.625rem 0.625rem 0;
+  height: 1.25rem;
+  width: 3.75rem;
+  background-color: rgb(205, 205, 205);
+  border-radius: 0.3125rem;
+}
+body main .grid {
+  width: 100%;
+  height: calc(100% - 6.25rem);
+  display: grid;
+  grid-template-columns: 10px, repeat(2, 1fr), 10px;
+  grid-template-rows: 40% 40%;
+  place-items: center;
+  margin-top: 1.25rem;
+  gap: 10px;
+  grid-template-areas: "box1 box1" "box2 box3";
+}
+body main .grid .container1 {
+  width: calc(90% + 10px);
+  height: 100%;
+  border-radius: 0.625rem;
+  background-color: rgb(205, 205, 205);
+  grid-area: box1;
+}
+body main .grid .container2, body main .grid .container3 {
+  width: 90%;
+  border-radius: 0.625rem;
+  height: 100%;
+  background-color: rgb(205, 205, 205);
+}
+body main .grid .container2 {
+  grid-area: box2;
+}
+body main .grid .container3 {
+  grid-area: box3;
+}
+body aside {
+  width: 30%;
+  background-color: white;
+}
+body aside .up {
+  display: flex;
+  width: 100%;
+  height: 1.875rem;
+}
+body aside .up .button {
+  width: 1.875rem;
+  margin: 0.625rem;
+  height: 1.875rem;
+  border-radius: 0.9375rem;
+  border: none;
+  background-color: rgb(205, 205, 205);
+}
+body aside .up .link {
+  width: calc(100% - 3.125rem);
+  height: 1.875rem;
+  background-color: rgb(205, 205, 205);
+  margin-right: 0.625rem;
+  margin-top: 0.625rem;
+  border-radius: 0.3125rem;
+}
+body aside .list .title {
+  width: 60%;
+  max-width: 5rem;
+  height: 1.25rem;
+  background-color: rgb(205, 205, 205);
+  margin-top: 1.875rem;
+  margin-left: 0.3125rem;
+  border-radius: 0.3125rem;
+}
+body aside .list ul {
+  list-style: none;
+}
+body aside .list ul li {
+  display: flex;
+}
+body aside .list ul li .icon {
+  height: 1.25rem;
+  min-width: 1.25rem;
+  max-width: 1.25rem;
+  width: 1.25rem;
+  background-color: rgb(205, 205, 205);
+  margin: 0.625rem;
+  border-radius: 0.3125rem;
+}
+body aside .list ul li .feature {
+  height: 1.25rem;
+  width: 100%;
+  background-color: rgb(205, 205, 205);
+  margin: 0.625rem;
+  border-radius: 0.3125rem;
+}
+body aside .banner2 {
+  height: 5rem;
+  width: 80%;
+  margin: 0.625rem;
+  background-color: rgb(205, 205, 205);
+  border-radius: 0.3125rem;
+}/*# sourceMappingURL=style.css.map */
