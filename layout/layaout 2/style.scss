@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@function rem($pixel){
+    @return ($pixel/16)*1rem;
+}
+body{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   nav{
+    width: 10%;
+    background-color: rgb(193, 193, 193);
+    button{
+        width: 30px;
+        height: 30px;
+        
+        margin-left: 25%;
+        margin-top: rem(10);
+    }
+    
+   }
+   main{
+    width: 60%;
+    background-color: white;
+    .container{
+        display: flex;
+        height: 20%;
+        justify-content:left;
+        align-items: center;
+        input{
+            margin-left: rem(10);
+            border: none;
+            background-color: rgb(225, 221, 221);
+            border-radius: 5px;
+            color: white;
+        }
+    }
+    
+   }
+   aside{
+    width: 30%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    .logo{
+        height: rem(20);
+        width: rem(80);
+        background-color: rgb(207, 204, 204);
+        margin-top: rem(20);
+    }
+    
+   }
+   .fly_button{
+    position: absolute;
+    bottom:rem(20);
+    left:2.5%;
+    width: rem(30);
+    height: rem(30);
+    border: none;
+    border-radius: rem(15);
+
+    background-color:grey;
+   
+   }
+}
+@media (max-width:400px) {
+    body{
+        flex-direction: column;
+    }
+    #nav{
+        width: 100%;
+        justify-content: center;
+        button{
+            margin-left: rem(10);
+            margin-bottom: rem(10);
+        }
+    }
+    #main{
+        width: 100%;
+        height: calc(100% - 10%);
+        hr{
+            display: none;
+        }
+    }
+    #aside{
+        display:none;
+    }
+    #fly_button{
+        position: absolute;
+        bottom: rem(20);
+        left:80%;
+        
+    }
+}
