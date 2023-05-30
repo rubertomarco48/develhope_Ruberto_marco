@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@function rem($pixel){
+    @return ($pixel/16)*1rem;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: yellow;
+    aside{
+        display: flex;
+        justify-content: center;
+        width: 25%;
+        background-color: grey;
+        .logo{
+            position: relative;
+            top:rem(20);         
+            width: rem(50);
+            height: rem(20);
+            background-color: rgb(192, 191, 191);
+        }
+    }
+    main{
+        width: 75%;
+        background-color: white;
+        nav{
+            display: flex;
+            justify-content: right;
+            height: rem(40);
+            width: 100%;
+            background-color: rgb(198, 196, 196);
+            .logo{
+                position: relative;
+                top:rem(20);         
+                width: rem(50);
+                height: rem(20);
+                position: absolute;
+                left: rem(10);
+                top: rem(10);
+                background-color: grey;
+                visibility: hidden;
+            }
+            button{
+                margin: rem(10);
+            }
+        }
+        article{
+            width: 50%;
+            height: 20%;
+            background-color: grey;
+            border-radius: rem(10);
+            margin: calc((100% - rem(40))/2 ) auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            input{
+                width: 70%;
+            }
+
+        }
+    }
+}
+@media (max-width:400px) {
+    #logo-mobile{
+        visibility: visible;}
+    #main{
+        width: 100%;
+       
+    }
+    #sidebar{
+        display: none;
+        visibility: hidden;
+       }
+    }
+ 
+    
