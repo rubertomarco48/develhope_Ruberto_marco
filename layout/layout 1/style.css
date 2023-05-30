@@ -69,6 +69,16 @@ body main article input {
   #main {
     width: 100%;
   }
+  #article-mobile {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    border-radius: 0px;
+    margin: 0;
+  }
+  #cerca {
+    width: 0.625rem;
+  }
   #sidebar {
     display: none;
     visibility: hidden;

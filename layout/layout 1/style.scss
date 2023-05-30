@@ -71,10 +71,25 @@ body{
         width: 100%;
        
     }
+    #article-mobile{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        border-radius: 0px;
+        margin: 0;
+    }
+    $var:calc((100% - rem(10))/2);
+    @debug $var;
+    #cerca{
+        width: rem(10);
+      
+    }
     #sidebar{
         display: none;
         visibility: hidden;
        }
+
+
     }
  
     
