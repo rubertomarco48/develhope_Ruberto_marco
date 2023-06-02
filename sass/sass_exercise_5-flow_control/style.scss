@@ -56,11 +56,13 @@ div {
       display: flex;
       justify-content: space-between;
       width: 95%;
+      /* ciclo per altezza font */
       @for $index from 1 through 3 {
         .fs-#{$index}rem{
           font-size: #{$index}rem;
         }
       }
+      /* ciclo per colore sfondo e colore testo  */
       @for $inde from 1 through 20 {
         div:nth-child(#{$inde}){
          background-color: darken($color: #ffffff, $amount: calc($inde*5%) );

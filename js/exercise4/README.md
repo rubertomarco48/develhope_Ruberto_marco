@@ -9,3 +9,5 @@ function sumUntil(maxValue) {
 }
 
 console.log(sumUntil(5)); // OUTPUT: 15
+
+Crea una funzione `sumUntil` che accetta un parametro e restituisce la somma di tutti i numeri compresi tra uno e il valore passato come parametro.

@@ -45,6 +45,8 @@ div section:nth-child(4) {
   display: flex;
   justify-content: space-between;
   width: 95%;
+  /* ciclo per altezza font */
+  /* ciclo per colore sfondo e colore testo  */
 }
 div section:nth-child(4) .fs-1rem {
   font-size: 1rem;
