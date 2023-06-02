@@ -5,5 +5,10 @@ function inner() {
         return helloName;
     }
     return printName();
+    
 }
-console.log(inner());
+
+/* setTimeout(console.log(inner()),1000); */
+timer = setTimeout(() => { console.log(inner()); }, 1000);
+ 
+
