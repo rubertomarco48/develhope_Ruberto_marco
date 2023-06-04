@@ -1,11 +1,29 @@
-function uncompletedNotes(notes) {
-  // ...
-}
+function uncompletedNotes(vettore) {
+  vettore.forEach((el) => {
+    test = el.description;
+    test2 = el.id;
+    test3= el.done;
+    test4= el.todos;
+    if (test == ""|| test == undefined ) {
+      console.log("è obbligatorio inserire la descrizione");
+     }if (test2 == ""|| test2 == undefined ) {
+      console.log("è obbligatorio inserire l'ID");
+     }if (test3 == ""||test3 == undefined) {
+      console.log("è obbligatorio inserire DONE");
+     }if (test4 == ""||test4 == undefined) {
+      console.log("è obbligatorio inserire TODOS");     
+     }
+     
+    
+  })
+    
+    
+  }
 
 const notes = [
   {
     id: 1,
-    description: "Workout program",
+    description: "Body-builder",
     todos: [
       {
         id: 1,
@@ -51,5 +69,5 @@ const notes = [
     ],
   },
 ];
-
+/* l'esrcizio so che non è corretto ma non sono riuscito a risolverlo */
 uncompletedNotes(notes);
