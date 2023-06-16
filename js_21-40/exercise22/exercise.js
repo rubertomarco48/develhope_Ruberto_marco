@@ -4,7 +4,7 @@ const person = {
   lastName: 'Rossi',
   age: 25
 };
-let {id,firstName,lastName,age} = person
+let {id,firstName,lastName,age} = person;
 /* const id = person.id;
 const firstName = person.firstName;
 const lastName = person.lastName;
