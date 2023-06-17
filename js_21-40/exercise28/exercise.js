@@ -1,5 +1,9 @@
 function sum(...number) {
-  return number;
+  let total = 0;
+  for (const numero of number) {
+    total += numero;
+  }
+  return total;
 }
 
 const numbers = [1, 2, 3];
