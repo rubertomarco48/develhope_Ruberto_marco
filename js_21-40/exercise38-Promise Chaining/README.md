@@ -9,3 +9,13 @@ Tips:
 
 - If in doubt, watch the lesson
 - To understand how they work, you can try adding `setTimeout` to the promise functions
+
+Scrivi una prima `promessa` che prenda come parametro la variabile `isLogged` trovata nel file `exercise.js`.
+Se la variabile è vera, restituiamo un numero casuale dalla risoluzione, altrimenti inviamo un errore.
+Scriviamo una seconda `promise` che prende come parametro una variabile di tipo number. Se il parametro di input è maggiore di 0.5, nella risoluzione dobbiamo restituire i seguenti dati: `{nome: "John", età: 24}`, altrimenti dobbiamo inviare un `errore`.
+Fatto ciò, prova a concatenare le promesse per restituire infine l'oggetto finale `{nome: "John", età: 24}`
+
+Suggerimenti:
+
+- In caso di dubbio, guarda la lezione
+- Per capire come funzionano, puoi provare ad aggiungere `setTimeout` alle funzioni di promessa
