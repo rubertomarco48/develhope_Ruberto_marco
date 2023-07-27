@@ -19,9 +19,7 @@ export class CounterDisplay extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Conteggio {this.state.count}</h1>
-      </div>
+        <h1>Conteggio {this.state.count}</h1>      
     );
   }
 }

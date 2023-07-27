@@ -8,7 +8,7 @@ export class CounterDisplay extends React.Component {
       count: this.props.base,
     };
   }
-
+  
   componentDidMount() {
     this.int = setInterval(() => {
       this.setState((State) => ({
