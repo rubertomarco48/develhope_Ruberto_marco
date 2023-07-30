@@ -1,21 +1,51 @@
-import React from "react"
-export class Form extends React.Component{
-    state={username:"World"}
-    handlerSubmit = (e) =>{       
-        e.preventDefault()
-        const username = e.target.elements.username.value
-        const pass = e.target.elements.password.value
-        console.log(username+" "+ pass);
-    }
-    render(){
-        return(
-        <form onSubmit={this.handlerSubmit} onReset={()=>{this.setState({username:"World"})}}>
-            <h1 >Welcome,{this.state.username}</h1>
-            <input name="username" onChange={(e)=>{this.setState({username: e.target.value})}}/>
-            <input type="password" name="password"/>
-            <button type="submit">submit</button>
-            <button type="reset" >reset</button>
+import React,{createRef} from "react";
+
+export class Form extends React.Component {
+  constructor(props) {
+    super(props);
+    this.usernameInputRef = createRef();
+  }
+
+  componentDidMount() {
+    this.usernameInputRef.current.focus();
+    console.log(this.usernameInputRef.current.focus());
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const username = event.target.username.value;
+    const password = event.target.password.value;
+    console.log("Username:", username);
+    console.log("Password:", password);
+  };
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            ref={this.usernameInputRef} 
+            type="text"
+            name="username"
+            placeholder="Username"
+          />
+          <br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+          <br/>
+          <button type="reset">Reset</button>
+          <br />
+          <button type="submit">Log in</button>
         </form>
-        )
-    }
+      </div>
+    );
+  }
 }
+
+
+
+
+
