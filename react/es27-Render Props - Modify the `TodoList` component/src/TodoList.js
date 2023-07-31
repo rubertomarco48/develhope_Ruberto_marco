@@ -1,8 +1,7 @@
 import React from "react"
 export class TodoList extends React.Component{
-
     state={
-        array : [],
+        array : this.props.data,
         newItem : "",
     }
     handleChange =(e) =>{
