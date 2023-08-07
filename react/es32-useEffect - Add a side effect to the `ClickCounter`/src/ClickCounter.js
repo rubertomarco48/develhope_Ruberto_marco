@@ -4,9 +4,18 @@ export function ClickCounter() {
   const [count, setCount] = useState(0);
 
   const handleClick = () => {
-    setCount((prev) => { return prev + 1 });
+    setCount((prev) => {
+      return prev + 1;
+    });
   };
-  useEffect(()=>{console.log(count)},[count])
+  useEffect(() => {
+    const intervallo = setInterval(() => {
+      console.log(count);
+    }, 1000);
+    return () => {
+      clearInterval(intervallo);
+    };
+  }, [count]);
   return (
     <div>
       <button onClick={() => handleClick()}>incrementa</button>
