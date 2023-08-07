@@ -9,8 +9,13 @@ export function ClickCounter() {
     });
   };
   useEffect(() => {
+    const intervallo = setInterval(() => {
       console.log(count);
-    },[count]);
+    }, 1000);
+    return () => {
+      clearInterval(intervallo);
+    };
+  }, [count]);
   return (
     <div>
       <button onClick={() => handleClick()}>incrementa</button>
