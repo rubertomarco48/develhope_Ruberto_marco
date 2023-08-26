@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 export function CarDetails({initialData}) {
-    const {initValueModel,initValueYear,initValueColor}= initialData
-    const [modello,setModello]=useState(initValueModel)
-    const [anno,setAnno]=useState(initValueYear)
-    const [colore,setColore]= useState(initValueColor)
+    const data = useRef(initialData)
+    const [modello,setModello]=useState(data.current.ModelD)
+    const [anno,setAnno]=useState(data.current.YearD)
+    const [colore,setColore]= useState(data.current.ColorD)
 const handleChangeModel=(e)=>{
     setModello(e.target.value)
 }
