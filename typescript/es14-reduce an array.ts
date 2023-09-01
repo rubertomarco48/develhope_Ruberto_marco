@@ -21,7 +21,8 @@ const populations = [
 
 const sumOfPopulations = populations.reduce((total, population) => {
     return total + population;
-}, false);
+}, 0
+);
 
 console.log(sumOfPopulations);
 

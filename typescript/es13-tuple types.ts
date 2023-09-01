@@ -9,7 +9,7 @@ const countryPopulation = ["China", 1_412_600_000];
 // Change the `CountryWithPopulation` type into a tuple type.
 // This should fix the type error on Line 14.
 
-type CountryWithCurrency = [];
+type CountryWithCurrency = [string,string,string];
 
 const countryCurrency: CountryWithCurrency = ["Italy", "Euro", "EUR"];
 
@@ -17,9 +17,9 @@ const countryCurrency: CountryWithCurrency = ["Italy", "Euro", "EUR"];
 // Use the readonly modifier and the tuple type syntax: readonly [type, type]
 // This will cause a type error. Remove the code that now has a type error.
 
-const countryLanguage = ["Greece", "Greek"];
+const countryLanguage: readonly [string,string] = ["Greece", "Greek"];
 
-countryLanguage.reverse();
+/* countryLanguage.reverse(); */
 
 console.log(countryLanguage);
 
