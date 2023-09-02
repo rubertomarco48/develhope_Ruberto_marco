@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState,useEffect } from "react";
 export function ShowGithubUser(){
     const {username="rubertomarco48"} = useParams()
@@ -29,7 +29,7 @@ export function ShowGithubUser(){
           <p>Followers: {Data.followers}</p>
           <p>Following: {Data.following}</p>
           <p>Public Repos: {Data.public_repos}</p>
-          <Link to="/">HOME</Link>
+          
         </div>
       );
     
