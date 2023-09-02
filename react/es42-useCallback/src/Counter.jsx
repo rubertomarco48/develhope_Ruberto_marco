@@ -1,20 +1,11 @@
-import { useCallback,useRef,useState } from "react"
+
+import { useCounter } from "./useCounter"
 
 export function Counter() {
-    const initialValue = useRef(0)
-    const [counter,setCounter]= useState(initialValue.current);
-    const onIncrement = useCallback(()=>{
-        setCounter(pre =>pre + 1)
-    },[])
-    const onDecrement=useCallback(()=>{
-        setCounter(pre =>pre - 1)
-    },[])
-    const onReset=useCallback(()=>{
-        setCounter(initialValue.current)
-    },[])
+    const {count,onIncrement,onDecrement,onReset}=useCounter()
     return (
         <>
-        <h1>{counter}</h1>
+        <h1>{count}</h1>
         <button onClick={onIncrement}>Incrementa</button>
         <button onClick={onDecrement}>Decrementa</button>
         <button onClick={onReset}>Reset</button>
