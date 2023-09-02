@@ -1,33 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export function useGithubUser() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+export function useGithubUser(user) {
+  const [data, setData] = useState({});
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  async function fetchGithubUserData(username) {
-    try {
-      setLoading(true);
-      setError(null);
+  function fetchData() {
+    setLoading(true);
+    setError(null);
 
-      const response = await fetch(`https://api.github.com/users/${username}`);
-      if (!response.ok) {
-        throw new Error("Failed to fetch user data");
-      }
-
-      const userData = await response.json();
-      setData(userData);
-      setLoading(false);
-    } catch (error) {
-      setError(error);
-      setLoading(false);
-    }
+    fetch(`https://api.github.com/users/${user}`)
+      .then((response) => response.json())
+      .then((dataFetch) => {
+        setData(dataFetch);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        setLoading(false);
+      });
   }
+
+  useEffect(() => {
+    if (user) {
+      fetchData();
+    }
+  },[user]);
 
   return {
     data: data,
-    loading: loading,
     error: error,
-    fetchGithubUserData: fetchGithubUserData,
+    loading: loading,
+    fetchUser: fetchData, // Return the fetch function
   };
 }

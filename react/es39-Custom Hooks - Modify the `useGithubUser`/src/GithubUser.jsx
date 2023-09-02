@@ -1,25 +1,15 @@
 import { useGithubUser } from "./useGithubUser";
-import { useEffect } from "react";
 
-export function GithubUser({ user }) {
-  const { data, loading, error, fetchGithubUserData } = useGithubUser();
+export function GithubUser(props) {
+  const user = useGithubUser(props.user);
+  const { data, error, loading } = user;
 
-  useEffect(() => {
-    if (user) {
-      fetchGithubUserData(user);
-    }
-  }, [user, fetchGithubUserData]);
+  if (error !== null) {
+    return <p>{error.message}</p>;
+  }
 
   if (loading) {
     return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
-
-  if (!data) {
-    return null;
   }
 
   return (
