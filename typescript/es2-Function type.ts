@@ -21,11 +21,11 @@ doubleThePopulation(8_526);
 // Alter this function so the `language2` parameter is optional.
 // Hint: Check `language2` is not `undefined` before passing it to `console.log()`.
 
-function languagesSpoken(country: string, language1: string, language2: string|void): void {
+function languagesSpoken(country: string, language1: string, language2: string|void ): void {
     console.log(`The languages spoken in ${country} are:`);
 
     console.log(language1);
-if (typeof language2 !== "undefined") {
+if (language2) {
     console.log(language2);
 }
     
