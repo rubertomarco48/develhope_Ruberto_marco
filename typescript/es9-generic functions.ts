@@ -28,13 +28,10 @@ interface User {
 }
 
 // Pass the `User` type as a type argument to the generic `fetchData()` function.
-// This should fix the type error on Line 35.
-
-let user:User ={
-    name: await fetchData("http://api.com/user/1")
-}
-console.log(user.name);
-
-// ----
+// Use `await` when calling `fetchData` since it returns a promise.
+(async () => {
+    let user: User = await fetchData<User>("http://api.com/user/1");
+    console.log(user.name);
+})();
 
 export {};
