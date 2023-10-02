@@ -23,7 +23,7 @@ countryNameLength("United States of America");
 // Fix the type error we see when calling this function.
 // Hint: Replace one of the `never` types with a different type.
 
-function throwCountryError(message: string): string {
+function throwCountryError(message: string): never {
     throw new Error(`Could not find country: ${message}`);
 }
 
