@@ -1,9 +1,9 @@
-export function TodoElement({onDelete,todo}) {
+export function TodoElement(props) {
  return(
-    <li>
-        <p>{todo}</p>
-        <button onClick={onDelete}>Delete</button>
-    </li>
+   <div>
+      {props.render}
+      <button onClick={()=>props.onClick()}></button>
+   </div>
     
  )   
 }
