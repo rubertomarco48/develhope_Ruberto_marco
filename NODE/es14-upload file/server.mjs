@@ -8,6 +8,7 @@ import {
   getOneById,
   post,
   putById,
+  db
 } from "./controller/planetController.mjs";
 const port = process.env.port;
 const host = process.env.host;
@@ -36,14 +37,17 @@ app.put("/planets/:id", putById);
 
 app.delete("/planets/:id", deleteById);
 
-app.post('/upload', upload.single('image'), (req, res) => {
+
+app.patch('/upload/:id', upload.single('image'), (req, res) => {
   // La proprietà 'image' è il nome del campo file nell'HTML
   // req.file contiene i dettagli del file caricato, ad esempio il nome del file, il tipo, ecc.
+  const {id}=req.params
   if (!req.file) {
     return res.status(400).json({ message: 'Nessun file caricato' });
   }
 
   res.status(200).json({ message: 'File caricato con successo' });
+  db.none("UPDATE pianeti SET imAGE=$2 WHERE id=$1",[id,`./upload/${req.file.filename}`])
 });
 
 
