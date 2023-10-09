@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 const CarDetails = ({ initialData }) => {
-  const [formData, setFormData] = useState(initialData);
+  const modelRef = useRef(null);
+  const yearRef = useRef(null);
+  const colorRef = useRef(null);
 
   useEffect(() => {
-    setFormData(initialData);
+    modelRef.current.value = initialData.model || '';
+    yearRef.current.value = initialData.year || '';
+    colorRef.current.value = initialData.color || '';
   }, [initialData]);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
 
   return (
     <form>
@@ -22,9 +18,7 @@ const CarDetails = ({ initialData }) => {
         <input
           type="text"
           id="model"
-          name="model"
-          value={formData.model}
-          onChange={handleInputChange}
+          ref={modelRef}
         />
       </div>
       <div>
@@ -32,9 +26,7 @@ const CarDetails = ({ initialData }) => {
         <input
           type="number"
           id="year"
-          name="year"
-          value={formData.year}
-          onChange={handleInputChange}
+          ref={yearRef}
         />
       </div>
       <div>
@@ -42,9 +34,7 @@ const CarDetails = ({ initialData }) => {
         <input
           type="text"
           id="color"
-          name="color"
-          value={formData.color}
-          onChange={handleInputChange}
+          ref={colorRef}
         />
       </div>
     </form>
