@@ -1,8 +1,14 @@
 import { useGithubUser } from "./useGithubUser";
-
+import { useEffect } from "react";
 export function GithubUser(props) {
-  const user = useGithubUser(props.user);
-  const { data, error, loading } = user;
+  const user = useGithubUser();
+  const { data, error, loading, fetchUser } = user;
+
+  useEffect(() => {
+    if (props.user) {
+      fetchUser(props.user); // Chiama la funzione fetch nel componente
+    }
+  }, [props.user]);
 
   if (error !== null) {
     return <p>{error.message}</p>;

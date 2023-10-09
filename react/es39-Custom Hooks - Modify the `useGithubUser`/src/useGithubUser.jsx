@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-export function useGithubUser(user) {
+export function useGithubUser() {
   const [data, setData] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  function fetchData() {
+  function fetchData(user) {
     setLoading(true);
     setError(null);
 
@@ -21,16 +21,10 @@ export function useGithubUser(user) {
       });
   }
 
-  useEffect(() => {
-    if (user) {
-      fetchData();
-    }
-  },[user]);
-
   return {
     data: data,
     error: error,
     loading: loading,
-    fetchUser: fetchData, // Return the fetch function
+    fetchUser: fetchData, // Restituisce la funzione fetch
   };
 }
